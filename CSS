@@ -1,0 +1,133 @@
+1. Flexbox
+Make Container Flexible
+.container{
+    display: flex;
+}
+2. Main Axis Alignment
+justify-content: center;
+
+Options:
+
+justify-content: flex-start;
+justify-content: center;
+justify-content: flex-end;
+justify-content: space-between;
+justify-content: space-around;
+space-between
+Logo              Links
+
+Used in your navbar.
+
+3. Cross Axis Alignment
+align-items: center;
+
+Aligns items vertically.
+
+4. Flex Direction
+Row (Default)
+flex-direction: row;
+A B C
+Column
+flex-direction: column;
+A
+B
+C
+
+Used in the login form.
+
+5. Gap
+gap: 20px;
+
+Adds spacing between flex items.
+
+Used in:
+
+Navbar links
+Gallery items
+6. Flex Wrap
+flex-wrap: wrap;
+
+Moves items to the next row when space runs out.
+
+nowrap (Default)
+flex-wrap: nowrap;
+
+All items stay in one row.
+
+wrap
+flex-wrap: wrap;
+1 2 3 4
+5 6 7 8
+
+Used in Photo Gallery.
+
+7. Centering a Login Form
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+100vh
+
+Means full screen height.
+
+8. Box Shadow
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+Adds depth to elements.
+
+Used in Login Form.
+
+9. Border Radius
+border-radius: 10px;
+
+Rounds corners.
+
+10. Hover Effect
+Transition
+transition: 0.3s ease;
+
+Makes animation smooth.
+
+Scale
+transform: scale(1.05);
+
+Enlarges element on hover.
+
+Example:
+
+img:hover{
+    transform: scale(1.05);
+}
+11. Object Fit
+object-fit: cover;
+
+Prevents image distortion.
+
+Used in Gallery.
+
+12. Media Queries
+
+Used to make websites responsive.
+
+@media (max-width: 768px){
+    footer{
+        flex-direction: column;
+    }
+}
+Purpose
+Mobile
+Tablet
+Laptop
+Desktop
+
+Different layouts for different screen sizes.
+
+Projects Completed Today
+
+✅ Flexbox Navbar
+✅ Centered Login Form
+✅ Photo Gallery with Flex Wrap
+✅ Image Hover Animation
+✅ Media Query Revision
