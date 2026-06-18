@@ -1,234 +1,100 @@
-Here are concise revision notes for **HTML Forms** and **Semantic Tags**:
-
-# 1. HTML Forms
-
-Forms are used to collect user input.
-
-### Basic Structure
-
-```html
-<form action="/submit" method="post">
-    <label>Name:</label>
-    <input type="text" name="name">
-
-    <button type="submit">Submit</button>
+1. Forms
+Form Tag
+<form action="#">
 </form>
-```
 
-### Important Form Elements
+Used to collect user input.
 
-#### Text Input
-
-```html
+Input Types
 <input type="text">
-```
-
-#### Password
-
-```html
 <input type="password">
-```
-
-#### Email
-
-```html
 <input type="email">
-```
-
-#### Number
-
-```html
 <input type="number">
-```
+Required Attribute
+<input type="text" required>
+Makes the field mandatory.
+Form cannot be submitted if empty.
+Label Tag
+<label for="username">Username</label>
+<input type="text" id="username">
 
-#### Radio Button (Single Choice)
+Why use it?
 
-```html
-<input type="radio" name="gender"> Male
-<input type="radio" name="gender"> Female
-```
-
-#### Checkbox (Multiple Choices)
-
-```html
-<input type="checkbox"> Java
-<input type="checkbox"> Python
-```
-
-#### Dropdown
-
-```html
-<select>
-    <option>India</option>
-    <option>USA</option>
-</select>
-```
-
-#### Text Area
-
-```html
-<textarea rows="4" cols="20"></textarea>
-```
-
-#### Submit Button
-
-```html
-<button type="submit">Submit</button>
-```
-
-### Useful Attributes
-
-| Attribute   | Purpose            |
-| ----------- | ------------------ |
-| placeholder | Hint text          |
-| required    | Mandatory field    |
-| value       | Default value      |
-| readonly    | Cannot edit        |
-| disabled    | Disabled field     |
-| maxlength   | Maximum characters |
+Improves accessibility.
+Clicking the label focuses the input.
+Radio Button vs Checkbox
+Radio Button
+<input type="radio">
+Select only one option.
 
 Example:
 
-```html
-<input type="text" placeholder="Enter name" required>
-```
+○ Male
+○ Female
+Checkbox
+<input type="checkbox">
+Select multiple options.
 
----
+Example:
 
-# 2. Semantic Tags
+☑ Java
+☑ DSA
+☐ Web Dev
+2. GET vs POST
+GET
+<form method="GET">
+Data visible in URL.
+Used for searching/filtering.
+Less secure.
+POST
+<form method="POST">
+Data not visible in URL.
+Used for login/signup.
+More secure.
+3. Semantic Tags
 
-Semantic tags clearly describe the meaning of content.
+Semantic tags provide meaning to content.
 
-### Why Use Semantic Tags?
-
-* Better readability
-* Better SEO
-* Better accessibility
-* Cleaner code
-
----
-
-### Common Semantic Tags
-
-#### Header
-
-Top section of webpage.
-
-```html
+Common Semantic Tags
 <header>
-    <h1>My Website</h1>
-</header>
-```
-
-#### Navigation
-
-Navigation links.
-
-```html
 <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-</nav>
-```
-
-#### Main
-
-Main content area.
-
-```html
 <main>
-    Content goes here
-</main>
-```
-
-#### Section
+<section>
+<article>
+<footer>
+div vs Semantic Tags
+div
+<div></div>
+No meaning.
+Used mainly for layout.
+Semantic Tag
+<section></section>
+Gives meaning to content.
+Better for SEO and accessibility.
+4. section vs article
+Section
 
 Groups related content.
 
-```html
 <section>
-    <h2>Services</h2>
+    <h2>Courses</h2>
 </section>
-```
-
-#### Article
+Article
 
 Independent content.
 
-```html
 <article>
-    <h2>Blog Post</h2>
+    Java Course
 </article>
-```
 
-#### Aside
+Example:
 
-Sidebar or extra information.
-
-```html
-<aside>
-    Related Links
-</aside>
-```
-
-#### Footer
-
-Bottom section of webpage.
-
-```html
-<footer>
-    Copyright 2026
-</footer>
-```
-
----
-
-# Semantic Layout Example
-
-```html
-<body>
-    <header>
-        <h1>My Website</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-    </nav>
-
-    <main>
-        <section>
-            <article>
-                <h2>Blog Title</h2>
-                <p>Blog Content</p>
-            </article>
-        </section>
-
-        <aside>
-            Related Posts
-        </aside>
-    </main>
-
-    <footer>
-        Copyright 2026
-    </footer>
-</body>
-```
-
-### Interview Questions
-
-1. What is the difference between `<div>` and semantic tags?
-2. Difference between `<section>` and `<article>`?
-3. Why are semantic tags important for SEO?
-4. Difference between radio buttons and checkboxes?
-5. What is the purpose of the `required` attribute?
-6. Difference between GET and POST methods in forms?
-
-Semantic tags give meaning to webpage content.
-<div> is a generic container with no semantic meaning.
-<section> groups related content; <article> is self-contained content.
-Radio buttons allow one choice; checkboxes allow multiple choices.
-required makes a form field mandatory.
-GET sends data through the URL; POST sends data through the request body.
-
-and project questions.
+<section>
+    <article>Java Course</article>
+    <article>Web Dev Course</article>
+    <article>DSA Course</article>
+</section>
+5. Why Semantic Tags Matter for SEO
+Easier for search engines to understand content.
+Improves accessibility.
+Better website structure.
