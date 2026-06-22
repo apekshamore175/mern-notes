@@ -1,0 +1,551 @@
+# JavaScript Revision Notes – Day 1
+
+---
+
+# 1. Variables
+
+Variables are used to store data.
+
+## let
+
+* Can reassign ✅
+* Cannot redeclare ❌
+
+```javascript
+let age = 20;
+age = 21;
+```
+
+---
+
+## const
+
+* Cannot reassign ❌
+* Cannot redeclare ❌
+
+```javascript
+const PI = 3.14;
+```
+
+---
+
+## var
+
+* Can reassign ✅
+* Can redeclare ✅
+
+```javascript
+var age = 20;
+var age = 21;
+```
+
+---
+
+## Difference
+
+| Keyword | Reassign | Redeclare |
+| ------- | -------- | --------- |
+| var     | ✅        | ✅         |
+| let     | ✅        | ❌         |
+| const   | ❌        | ❌         |
+
+### Modern JavaScript Rule
+
+* Use `const` by default.
+* Use `let` when value changes.
+* Avoid `var`.
+
+---
+
+# 2. Data Types
+
+## String
+
+```javascript
+let name = "Apeksha";
+```
+
+---
+
+## Number
+
+```javascript
+let age = 20;
+```
+
+---
+
+## Boolean
+
+```javascript
+let isStudent = true;
+```
+
+---
+
+## Undefined
+
+```javascript
+let x;
+```
+
+Output:
+
+```javascript
+undefined
+```
+
+---
+
+## Null
+
+```javascript
+let user = null;
+```
+
+---
+
+## Object
+
+```javascript
+let student = {
+    name: "Apeksha",
+    age: 20
+};
+```
+
+---
+
+## Array
+
+```javascript
+let numbers = [10, 20, 30];
+```
+
+---
+
+## typeof
+
+Checks datatype.
+
+```javascript
+console.log(typeof "Hello");
+console.log(typeof 10);
+console.log(typeof true);
+```
+
+Output:
+
+```javascript
+string
+number
+boolean
+```
+
+---
+
+# 3. Operators
+
+## Arithmetic Operators
+
+| Operator | Meaning        |
+| -------- | -------------- |
+| +        | Addition       |
+| -        | Subtraction    |
+| *        | Multiplication |
+| /        | Division       |
+| %        | Remainder      |
+| **       | Power          |
+
+Example:
+
+```javascript
+10 % 3
+```
+
+Output:
+
+```javascript
+1
+```
+
+---
+
+## Comparison Operators
+
+| Operator | Meaning                |
+| -------- | ---------------------- |
+| >        | Greater Than           |
+| <        | Less Than              |
+| >=       | Greater Than Equal     |
+| <=       | Less Than Equal        |
+| ==       | Value Check            |
+| ===      | Value + Datatype Check |
+
+### Difference
+
+```javascript
+10 == "10"
+```
+
+Output:
+
+```javascript
+true
+```
+
+---
+
+```javascript
+10 === "10"
+```
+
+Output:
+
+```javascript
+false
+```
+
+---
+
+## Logical Operators
+
+### AND
+
+```javascript
+true && true
+```
+
+Output:
+
+```javascript
+true
+```
+
+---
+
+### OR
+
+```javascript
+true || false
+```
+
+Output:
+
+```javascript
+true
+```
+
+---
+
+### NOT
+
+```javascript
+!true
+```
+
+Output:
+
+```javascript
+false
+```
+
+---
+
+# 4. Conditional Statements
+
+## if
+
+```javascript
+if(age >= 18){
+    console.log("Eligible");
+}
+```
+
+---
+
+## if-else
+
+```javascript
+if(age >= 18){
+    console.log("Eligible");
+}else{
+    console.log("Not Eligible");
+}
+```
+
+---
+
+## else-if
+
+```javascript
+if(marks >= 90){
+    console.log("A");
+}else if(marks >= 75){
+    console.log("B");
+}else{
+    console.log("C");
+}
+```
+
+---
+
+## switch
+
+```javascript
+switch(day){
+    case 1:
+        console.log("Monday");
+        break;
+
+    default:
+        console.log("Invalid");
+}
+```
+
+### break
+
+Stops execution of further cases.
+
+---
+
+# 5. Loops
+
+Used to repeat tasks.
+
+---
+
+## for Loop
+
+```javascript
+for(let i = 1; i <= 5; i++){
+    console.log(i);
+}
+```
+
+Output:
+
+```javascript
+1
+2
+3
+4
+5
+```
+
+---
+
+## while Loop
+
+```javascript
+let i = 1;
+
+while(i <= 5){
+    console.log(i);
+    i++;
+}
+```
+
+---
+
+## Increment
+
+```javascript
+i++;
+```
+
+Same as:
+
+```javascript
+i = i + 1;
+```
+
+---
+
+## Decrement
+
+```javascript
+i--;
+```
+
+Same as:
+
+```javascript
+i = i - 1;
+```
+
+---
+
+# 6. Functions
+
+Functions are reusable blocks of code.
+
+---
+
+## Function Declaration
+
+```javascript
+function greet(){
+    console.log("Hello");
+}
+```
+
+---
+
+## Function Call
+
+```javascript
+greet();
+```
+
+---
+
+## Parameters and Arguments
+
+```javascript
+function greet(name){
+    console.log(name);
+}
+
+greet("Apeksha");
+```
+
+* `name` → Parameter
+* `"Apeksha"` → Argument
+
+---
+
+## Return
+
+```javascript
+function add(a, b){
+    return a + b;
+}
+```
+
+```javascript
+let result = add(10, 20);
+```
+
+Output:
+
+```javascript
+30
+```
+
+---
+
+# Practice Problems Completed
+
+## 1. Even/Odd Number
+
+Concepts:
+
+* Function
+* if-else
+* Modulus `%`
+
+```javascript
+function checkEvenOdd(number){
+    if(number % 2 === 0){
+        console.log("Even");
+    }else{
+        console.log("Odd");
+    }
+}
+```
+
+---
+
+## 2. Largest of Three Numbers
+
+Concepts:
+
+* if-else-if
+* Logical AND (`&&`)
+
+```javascript
+function largestOfThree(a, b, c){
+    if(a > b && a > c){
+        console.log(a);
+    }else if(b > c){
+        console.log(b);
+    }else{
+        console.log(c);
+    }
+}
+```
+
+---
+
+## 3. Factorial
+
+Concepts:
+
+* Loop
+* Multiplication Accumulator
+
+```javascript
+function factorial(num){
+    let fact = 1;
+
+    for(let i = 1; i <= num; i++){
+        fact *= i;
+    }
+
+    console.log(fact);
+}
+```
+
+---
+
+## 4. Prime Number
+
+Concepts:
+
+* Loop
+* Divisibility Check
+* `return`
+
+```javascript
+function primeNumber(number){
+
+    if(number <= 1){
+        console.log("Not Prime");
+        return;
+    }
+
+    for(let i = 2; i < number; i++){
+
+        if(number % i === 0){
+            console.log("Not Prime");
+            return;
+        }
+
+    }
+
+    console.log("Prime");
+}
+```
+
+---
+
+# Day 1 Status ✅
+
+**Theory Completed**
+
+* Variables
+* Data Types
+* Operators
+* Conditional Statements
+* Loops
+* Functions
+
+**Problems Completed**
+
+1. Even/Odd Number
+2. Largest of Three Numbers
+3. Factorial
+4. Prime Number
+
+Tomorrow you can start **Day 2: Arrays & Objects**, which connects directly to the DSA you're learning in Java, so you'll pick it up quickly.
