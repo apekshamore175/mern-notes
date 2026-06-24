@@ -1,0 +1,361 @@
+# Day 2 – Arrays & Objects (Revision Notes)
+
+---
+
+# 1. Arrays
+
+An array is used to store multiple values in a single variable.
+
+### Syntax
+
+```javascript
+let fruits = ["Apple", "Banana", "Mango"];
+```
+
+### Access Elements
+
+```javascript
+console.log(fruits[0]); // Apple
+console.log(fruits[1]); // Banana
+```
+
+### Update Element
+
+```javascript
+fruits[1] = "Orange";
+```
+
+### Length
+
+```javascript
+console.log(fruits.length);
+```
+
+---
+
+# 2. Array Traversal
+
+Traversal means visiting every element of an array.
+
+### Using for Loop
+
+```javascript
+let arr = [10, 20, 30];
+
+for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+}
+```
+
+### Using for...of
+
+```javascript
+for(let value of arr){
+    console.log(value);
+}
+```
+
+---
+
+# 3. Array Methods
+
+## push()
+
+Adds element at the end.
+
+```javascript
+arr.push(40);
+```
+
+Before:
+
+```javascript
+[10,20,30]
+```
+
+After:
+
+```javascript
+[10,20,30,40]
+```
+
+---
+
+## pop()
+
+Removes last element.
+
+```javascript
+arr.pop();
+```
+
+---
+
+## unshift()
+
+Adds element at the beginning.
+
+```javascript
+arr.unshift(5);
+```
+
+---
+
+## shift()
+
+Removes first element.
+
+```javascript
+arr.shift();
+```
+
+---
+
+## includes()
+
+Checks if element exists.
+
+```javascript
+arr.includes(20);
+```
+
+Output:
+
+```javascript
+true
+```
+
+---
+
+## indexOf()
+
+Returns index of element.
+
+```javascript
+arr.indexOf(20);
+```
+
+Output:
+
+```javascript
+1
+```
+
+---
+
+## slice()
+
+Creates a copy of part of an array.
+
+```javascript
+let nums = [1,2,3,4,5];
+
+console.log(nums.slice(1,4));
+```
+
+Output:
+
+```javascript
+[2,3,4]
+```
+
+---
+
+## splice()
+
+Adds or removes elements.
+
+```javascript
+let nums = [1,2,3,4];
+
+nums.splice(1,2);
+```
+
+Output:
+
+```javascript
+[1,4]
+```
+
+---
+
+# 4. Objects
+
+Objects store data as key-value pairs.
+
+### Syntax
+
+```javascript
+let student = {
+    name: "Apeksha",
+    age: 20,
+    marks: 85
+};
+```
+
+---
+
+# 5. Access Object Properties
+
+### Dot Notation
+
+```javascript
+console.log(student.name);
+console.log(student.age);
+```
+
+### Bracket Notation
+
+```javascript
+console.log(student["marks"]);
+```
+
+---
+
+# 6. Update Object Property
+
+```javascript
+student.marks = 90;
+```
+
+---
+
+# 7. Add New Property
+
+```javascript
+student.branch = "IT";
+```
+
+---
+
+# 8. Delete Property
+
+```javascript
+delete student.age;
+```
+
+---
+
+# 9. Object Methods
+
+Methods are functions inside objects.
+
+```javascript
+let student = {
+    name: "Apeksha",
+
+    greet: function(){
+        console.log("Hello");
+    }
+};
+
+student.greet();
+```
+
+---
+
+# Problems Practiced
+
+## 1. Largest Element
+
+### Logic
+
+* Assume first element is largest.
+* Traverse array.
+* Update max whenever a larger element is found.
+
+```javascript
+function largestNum(arr){
+
+    let max = arr[0];
+
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+
+    return max;
+}
+```
+
+---
+
+## 2. Reverse Array
+
+### Logic
+
+* Start from last index.
+* Traverse backwards.
+
+```javascript
+function reverse(arr){
+
+    for(let i = arr.length - 1; i >= 0; i--){
+        console.log(arr[i]);
+    }
+}
+```
+
+---
+
+## 3. Count Frequency
+
+### Logic
+
+* Create empty object.
+* Traverse array.
+* Count occurrences.
+
+```javascript
+function countFrequency(arr){
+
+    let freq = {};
+
+    for(let i = 0; i < arr.length; i++){
+
+        if(freq[arr[i]]){
+            freq[arr[i]]++;
+        }else{
+            freq[arr[i]] = 1;
+        }
+    }
+
+    return freq;
+}
+```
+
+---
+
+# Mini Project: Student Management System
+
+### Concepts Used
+
+✅ Arrays
+
+✅ Objects
+
+✅ Loops
+
+✅ Functions
+
+### Features
+
+* Print students
+* Find topper
+* Calculate average marks
+* Add student
+* Count students
+
+---
+
+# Key Takeaways
+
+1. Arrays store multiple values.
+2. Objects store data as key-value pairs.
+3. Use loops to traverse arrays.
+4. `push()` is the most commonly used array method.
+5. Arrays and Objects are used together in almost every JavaScript project.
+6. Real-world data from APIs usually comes as Arrays of Objects.
+
+Tomorrow: **Functions & Scope**.
