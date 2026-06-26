@@ -325,30 +325,6 @@ function countFrequency(arr){
 }
 ```
 
----
-
-# Mini Project: Student Management System
-
-### Concepts Used
-
-✅ Arrays
-
-✅ Objects
-
-✅ Loops
-
-✅ Functions
-
-### Features
-
-* Print students
-* Find topper
-* Calculate average marks
-* Add student
-* Count students
-
----
-
 # Key Takeaways
 
 1. Arrays store multiple values.
